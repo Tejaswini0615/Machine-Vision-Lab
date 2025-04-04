@@ -164,3 +164,76 @@ EXERCISE6:
 2.	Implement region-growing segmentation by selecting a seed point and expanding based on similarity criteria. Modify region growing to automatically select multiple seeds based on edge detection.
 3.	Implement a quadtree-based region split and merge method for segmenting an image. Modify region splitting based on texture features (entropy, variance, Laplacian) instead of pixel intensity alone.
 
+EXERCISE7:
+1.	Multi-Scale Morphological Segmentation for Satellite Image Enhancement
+•	Implement multi-scale morphological filtering for terrain segmentation.
+o	 Apply small SE for fine details (e.g., roads, buildings).
+o	Apply large SE for coarse structures (e.g., forests, rivers).
+o	Merge results using weighted fusion.
+•	Use adaptive structuring elements to process different landscapes.
+•	 Urban Areas → Use rectangular SEs (aligned with buildings).
+•	 Forests & Vegetation → Use circular SEs (preserve tree clusters).
+•	 Mountains & Hills → Use elliptical SEs (capture sloped terrains).
+•	Water Bodies → Use disk-shaped SEs (eliminate boundary noise).
+
+2.	Dynamic Graph-Based Image Segmentation with Adaptive Edge Weights
+•	Implement a graph-based segmentation algorithm that dynamically updates edge weights based on local contrast.
+•	Use a self-learning mechanism to refine segment boundaries iteratively.
+
+3.	Morphological Hit-or-Miss Transform for Document Forgery Detection
+•	Implement hit-or-miss transform to detect forgery marks in scanned documents.
+•	Design custom structuring elements for common fraud patterns.
+
+EXERCISE8:
+1.	Implement thickening to enhance blood vessels in X-ray angiograms.
+•	Extract initial vessel structure using edge detection.
+•	Apply morphological thickening iteratively.
+•	Analyze vessel connectivity improvements.
+•	Evaluate on real medical images (X-ray/MRI).
+
+2.	Fill missing regions in satellite images using adaptive techniques.
+•	Select satellite images with cloud-covered or missing areas.
+•	Implement adaptive region filling using texture synthesis and interpolation.
+•	Compare results using different structuring elements.
+•	Evaluate the performance using terrain similarity metrics.
+
+3.	Use skeletonization to preprocess handwritten text for OCR systems.
+•	Use a dataset of handwritten characters.
+•	Apply skeletonization to reduce characters to a single-pixel width structure.
+•	Extract keypoints and compare with template matching.
+•	Evaluate performance improvements in OCR accuracy.
+
+EXERCISE9:
+1.	A satellite image processing system needs to detect and classify buildings, forests, and water bodies using Convex Hull-based shape approximation.
+•	Apply clustering-based segmentation to detect multiple objects.
+•	Compute the Convex Hull for each detected object.
+•	Analyze the convexity properties to distinguish between natural vs. man-made structures.
+•	Validate results using a dataset of labeled aerial images.
+
+2.	An industrial inspection system must detect defects in fabric rolls using GLCM-based texture analysis while ensuring rotation-invariant feature extraction.
+•	Compute GLCM matrices at different orientations (0°, 45°, 90°, 135°).
+•	Normalize and average features across orientations.
+•	Train a support vector machine (SVM) to classify textures into defective and non-defective.
+•	Evaluate performance using rotated test images.
+
+3.	A biometric authentication system needs to differentiate between real human faces and spoofed images (e.g., printed photos used to bypass facial recognition).
+•	Capture face images and apply LBP feature extraction.
+•	Train a deep learning model to classify real vs. spoofed faces.
+•	Implement real-time processing for anti-spoofing detection.
+•	Test the system against different spoofing attacks (printed images, 3D masks).
+
+EXERCISE10:
+1.	Hybrid Image Representation using FFT and DCT
+•	Apply FFT to extract low-frequency components from Image A.
+•	Apply DCT to extract high-frequency components from Image B.
+•	Combine the low-frequency and high-frequency components to generate a hybrid image (e.g., visible from different distances).
+•	Analyze the perceptual effect of hybrid images at varying resolutions.
+o	Downscale and upscale the hybrid image.
+o	Observe how different frequencies dominate at different distances.
+
+2.	Object Detection using SIFT & Haar Wavelets
+
+•	 Apply SIFT feature extraction on an image.
+•	 Use Haar-based wavelet decomposition to remove low-energy noise.
+•	Perform feature matching between a query image and multiple test images.
+•	Compare recognition accuracy before and after noise filtering.
